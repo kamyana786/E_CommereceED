@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "980596589219",
+    "project_id": "e-commerece-ed",
+    "storage_bucket": "e-commerece-ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980596589219:android:b191740cd83c5dd3717516",
+        "android_client_info": {
+          "package_name": "com.awais.e_commereceed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbajOF98K_edju8hbnYOcUaI5AN8QsZKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Adjust this radius to a large value, like 50dp or more, to ensure circular corners -->
+            <corners android:radius="50dp"/>
+
+            <!-- You could increase this radius depending on the size of the shape -->
+            <solid android:color="@color/green"/>
+        </shape>
+    </item>
+</selector>
