@@ -2,7 +2,6 @@ package com.awais.e_commereceed.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -25,7 +24,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.Viewholder
 
     @NonNull
     @Override
-    public ReviewAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         ViewholderReviewBinding binding = ViewholderReviewBinding.inflate(LayoutInflater.from(context), parent, false);
 
@@ -34,7 +33,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.Viewholder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ReviewAdapter.Viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
         holder.binding.nameTxt.setText(items.get(position).getName());
         holder.binding.descTxt.setText(items.get(position).getDescription());
         holder.binding.ratingTxt.setText(""+items.get(position).getRating());

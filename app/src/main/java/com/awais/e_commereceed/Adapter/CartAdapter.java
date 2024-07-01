@@ -2,9 +2,7 @@ package com.awais.e_commereceed.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,14 +33,14 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.Viewholder> {
 
     @NonNull
     @Override
-    public CartAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ViewholderCartBinding binding=ViewholderCartBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
 
         return new Viewholder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CartAdapter.Viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull Viewholder holder, int position) {
         holder.binding.titleTxt.setText(listItemSelected.get(position).getTitle());
         holder.binding.feeEachItem.setText("Rs"+listItemSelected.get(position).getPrice());
         holder.binding.totalEachItem.setText("Rs"+Math.round((listItemSelected.get(position).getNumberinCart() * listItemSelected.get(position).getPrice())));

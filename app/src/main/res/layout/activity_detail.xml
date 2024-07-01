@@ -10,8 +10,13 @@
     tools:context=".Activity.DetailActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,10 +162,7 @@
                         app:tabMode="fixed"
                         app:tabSelectedTextColor="@color/green"
                         app:tabTextAppearance="@style/tab_layout"
-
-                        app:tabTextColor="@color/black"
-
-                        />
+                        app:tabTextColor="@color/black" />
 
                     <View
                         android:id="@+id/view3"
@@ -172,7 +174,7 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewpager"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:background="@color/white" />
 
             </LinearLayout>
@@ -188,7 +190,26 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buyBtn"
+                style="android:style/Widget.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@drawable/green_button_bg"
+                android:text="Buy Now"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
         </LinearLayout>
     </ScrollView>
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/bottom_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
